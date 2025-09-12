@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calab实验室 - 首页</title>
+    <!-- 引入Font Awesome图标库，提供各种图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 引入Google Fonts，使用Roboto字体作为主要字体，Source Code Pro作为代码/特殊字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <!-- 引入自定义样式表 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ==================== Header (页眉) ==================== -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                
+    
+                <!-- 实验室Logo -->
+                <div class="logo-icon">
+                    <img src="images/crypto_blue.png" alt="Calab实验室Logo" class="lab-logo">
+                </div>
+            </div>
+            
+            <!-- 移动端菜单按钮，小屏幕下显示 -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- 导航菜单 -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="research.html">研究简介</a></li>
+                    <li><a href="project.html">研究成果</a></li>
+                    <li><a href="team.html">团队成员</a></li>
+                    <li><a href="contact.html">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== Hero Section (主视觉区) ==================== -->
+    <section class="hero">
+        <div class="container">
+            <h1>密码与认证实验室</h1>
+            <p>CALab实验室致力于密码学、零知识证明和区块链技术的创新研究，推动安全、隐私保护的分布式系统发展。</p>
+        </div>
+    </section>
+
+    <!-- ==================== News Section (新闻动态概要 - 首页展示部分) ==================== -->
+    <section id="news-overview" style="background-color: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>最新动态</h2>
+            </div>
+            
+            <div class="news-container">
+                <!-- 新闻项1 -->
+                <div class="news-item">
+                    <div class="news-date">
+                        <div class="day">15</div>
+                        <div class="month">2023.11</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>实验室在零知识证明领域取得突破性进展</h3>
+                        <p>我们提出了一种新型zk-SNARK构造方案，将证明生成时间缩短了40%...</p>
+                    </div>
+                </div>
+                
+                <!-- 新闻项2 -->
+                <div class="news-item">
+                    <div class="news-date">
+                        <div class="day">02</div>
+                        <div class="month">2023.10</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>成功举办2023区块链安全研讨会</h3>
+                        <p>来自全球20多所高校和研究机构的专家齐聚我校，共同探讨区块链安全...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all">
+                <a href="news.html" class="btn">查看所有新闻</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== partners-overview==================== -->
+    <section id="partners">
+        <div class="container">
+            <div class="section-title">
+                <h2>合作生态</h2>
+            </div>
+        
+            <div class="partners-section">
+                <div class="partners-grid">
+                <!-- 上海交通大学 -->
+                    <div class="partner-card">
+                         <a href="https://www.sjtu.edu.cn" target="_blank" class="partner-icon">
+                            
+                            <img src="images/partner/SJTU.png" alt="上海交通大学">
+                        </a>
+                    </div>
+
+                    <!-- 合作伙伴3 -->
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                
+                    
+                
+                    <!-- 合作伙伴3 -->
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                
+                    <!-- 合作伙伴4 -->
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                    </div>
+                    <!-- 上海交通大学海南研究院 -->
+                    <div class="partner-card hainan-institute">
+                        <a href="http://www.sjtuiodst.com.cn/" target="_blank" class="partner-icon">
+                            <img src="images/partner/SJTU_hainan.png" alt="上海交通大学海南研究院">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- ==================== Footer (页脚) ==================== -->
+<footer>
+    <div class="container">
+        
+        <!-- 版权信息 -->
+        <div class="copyright">
+            <p>&copy; 2024 上海交通大学密码与认证实验室 (CALab). 保留所有权利.</p>
+            <p>技术支持: CALab | 建议使用 Chrome 或 Edge 浏览器以获得最佳体验</p>
+        </div>
+
+    </div>
+</footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active'); // 点击按钮切换导航菜单的active类
+        });
+        
+        // 当点击导航链接时，关闭移动菜单 (可选)
+        document.querySelectorAll('nav ul li a').forEach(item => {
+            item.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

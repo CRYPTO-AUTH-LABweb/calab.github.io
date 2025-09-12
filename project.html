@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calab实验室 - 研究成果</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- ==================== Header (页眉) ==================== -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- 实验室Logo -->
+                <div class="logo-icon">
+                    <img src="images/crypto_blue.png" alt="Calab实验室Logo" class="lab-logo">
+                </div>
+            </div>
+            
+            <!-- 移动端菜单按钮，小屏幕下显示 -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- 导航菜单 -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="research.html">研究简介</a></li>
+                    <li><a href="project.html">研究成果</a></li>
+                    <li><a href="team.html">团队成员</a></li>
+                    <li><a href="contact.html">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== Publications Full Page (研究成果完整页面) ==================== -->
+    <section id="full-publications" style="background-color: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>我们的研究成果</h2>
+                <p>近期发表的重要论文及技术报告。</p>
+            </div>
+            
+            <div class="pub-list">
+                <!-- 论文项1 -->
+                <div class="pub-item">
+                    <div class="pub-title">基于递归组合的zk-SNARK高效构造方法</div>
+                    <div class="pub-authors">张教授, 王博士, 李研究员</div>
+                    <div class="pub-meta">
+                        <span><i class="fas fa-book"></i> 安全顶级会议, 2023</span>
+                        <span><i class="fas fa-link"></i> <a href="#" target="_blank">查看论文</a></span> <!-- target="_blank"在新标签页打开 -->
+                        <span><i class="fas fa-file-pdf"></i> <a href="#" target="_blank">PDF</a></span>
+                    </div>
+                    <p><em>摘要：</em> 本文提出了一种创新的zk-SNARK构造方法，通过递归组合技术显著提升了证明生成效率，将现有方案的证明时间缩短了40%。该方法为构建更高效的隐私保护应用提供了理论基础。</p>
+                </div>
+                
+                <!-- 论文项2 -->
+                <div class="pub-item">
+                    <div class="pub-title">区块链分片中的跨片交易原子性研究</div>
+                    <div class="pub-authors">李研究员, 陈博士, 张教授</div>
+                    <div class="pub-meta">
+                        <span><i class="fas fa-book"></i> 分布式顶级会议, 2023</span>
+                        <span><i class="fas fa-link"></i> <a href="#" target="_blank">查看论文</a></span>
+                        <span><i class="fas fa-file-pdf"></i> <a href="#" target="_blank">PDF</a></span>
+                    </div>
+                    <p><em>摘要：</em> 针对区块链分片架构中跨片交易原子性难以保证的问题，我们设计了一种新的两阶段提交协议，有效解决了分片间状态一致性问题，并通过实验证明了其高效率和鲁棒性。</p>
+                </div>
+                
+                <!-- 论文项3 -->
+                <div class="pub-item">
+                    <div class="pub-title">面向智能合约的模糊测试框架</div>
+                    <div class="pub-authors">陈博士, 王博士, 张教授</div>
+                    <div class="pub-meta">
+                        <span><i class="fas fa-book"></i> 软件工程顶级会议, 2023</span>
+                        <span><i class="fas fa-link"></i> <a href="#" target="_blank">查看论文</a></span>
+                        <span><i class="fas fa-file-pdf"></i> <a href="#" target="_blank">PDF</a></span>
+                    </div>
+                    <p><em>摘要：</em> 本文介绍了一个针对以太坊智能合约的自动化模糊测试框架，该框架结合符号执行和机器学习技术，能够高效发现合约中的重入、溢出等安全漏洞。</p>
+                </div>
+                
+                <!-- 论文项4 -->
+                <div class="pub-item">
+                    <div class="pub-title">基于同态加密的隐私保护机器学习方案</div>
+                    <div class="pub-authors">王博士, 张教授</div>
+                    <div class="pub-meta">
+                        <span><i class="fas fa-book"></i> 隐私保护顶级会议, 2023</span>
+                        <span><i class="fas fa-link"></i> <a href="#" target="_blank">查看论文</a></span>
+                        <span><i class="fas fa-file-pdf"></i> <a href="#" target="_blank">PDF</a></span>
+                    </div>
+                    <p><em>摘要：</em> 我们提出了一种基于全同态加密的隐私保护机器学习训练方案，允许在加密数据上直接执行模型训练，确保用户数据的绝对隐私，同时保持模型的高准确性。</p>
+                </div>
+
+                <!-- 更多论文项，可按需添加 -->
+                <div class="pub-item">
+                    <div class="pub-title">基于区块链的去中心化身份认证系统设计</div>
+                    <div class="pub-authors">赵硕士生, 李研究员</div>
+                    <div class="pub-meta">
+                        <span><i class="fas fa-book"></i> 区块链应用会议, 2023</span>
+                        <span><i class="fas fa-link"></i> <a href="#" target="_blank">查看论文</a></span>
+                        <span><i class="fas fa-file-pdf"></i> <a href="#" target="_blank">PDF</a></span>
+                    </div>
+                    <p><em>摘要：</em> 针对传统身份认证中心化风险，我们设计了一个基于Hyperledger Fabric的去中心化身份系统，利用零知识证明实现隐私保护下的身份验证。</p>
+                </div>
+            </div>
+            
+            <!-- 您可以在这里添加年度报告或技术白皮书的链接 -->
+            <div class="view-all" style="margin-top: 2rem;">
+                <a href="#" class="btn">查看更多研究成果</a>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('nav ul li a').forEach(item => {
+            item.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

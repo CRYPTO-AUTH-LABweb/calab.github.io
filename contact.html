@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calab实验室 - 联系我们</title>
+    <!-- 引入Font Awesome图标库，提供各种图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 引入Google Fonts，使用Roboto字体作为主要字体，Source Code Pro作为代码/特殊字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <!-- 引入自定义样式表。请确保此文件存在且路径正确。 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- ==================== Header (页眉) ==================== -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+    
+                <!-- 实验室Logo -->
+                <div class="logo-icon">
+                    <img src="images/crypto_blue.png" alt="Calab实验室Logo" class="lab-logo">
+                </div>
+            </div>
+            
+            <!-- 移动端菜单按钮，小屏幕下显示 -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- 导航菜单 -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="research.html">研究简介</a></li>
+                    <li><a href="project.html">研究成果</a></li>
+                    <li><a href="team.html">团队成员</a></li>
+                    <li><a href="contact.html">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== Contact & Join Us Section (联系我们与加入我们区块) ==================== -->
+    <section id="full-contact">
+        <div class="container">
+            
+            <div class="contact-container">
+                <!-- 左侧联系信息 -->
+                <div class="contact-info">
+                    <div class="blank-row"></div>
+                    <h3>实验室联系方式</h3>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>地址</h4>
+                            <p>上海交通大学计算机学院<br>密码与认证实验室<br>上海市闵行区东川路800号</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>通用邮箱</h4>
+                            <p>contact@sjtu.edu.cn</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="career-opportunities"> <!-- 重用 career-opportunities 类进行样式渲染 -->
+                    <h3>加入我们的团队</h3>
+                    <p>Calab实验室致力于推动密码学、零知识证明和区块链技术的前沿发展。我们坚信优秀的人才是创新的源泉，因此长期欢迎充满激情、具备扎实学术背景或实践经验的优秀人才加入我们的研究团队。</p>
+                    <p>无论您是希望深造的<strong>博士生/硕士生</strong>，还是对前沿技术充满好奇的<strong>研究助理/实习生</strong>，我们都诚挚欢迎您。</p>
+                    
+                    <p style="margin-top: 1.5rem; font-weight: 500;">
+                        请将您的<strong>简历 (CV)</strong>、<strong>个人陈述 (Personal Statement)</strong>、<strong>代表性论文 (如适用)</strong> 以及<strong>研究兴趣</strong>发送至我们的招聘邮箱：
+                    </p>
+
+                    <div class="contact-detail" style="margin-top: 1rem;">
+                        <div class="contact-icon" style="color: var(--primary);">
+                            <i class="fas fa-envelope-open-text"></i> <!-- 更具招聘意味的邮件图标 -->
+                        </div>
+                        <div>
+                            <h4>招聘与合作邮箱</h4>
+                            <p style="font-size: 1.2rem; font-weight: 700;">
+                                <a href="mailto:contact@calab-lab.edu" style="color: var(--accent); text-decoration: none;">contact@calab-lab.edu</a>
+                            </p>
+                            <p style="font-size: 0.9rem; color: var(--text);">（请在邮件主题中注明您的申请意向，如“博士后申请-姓名”）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        // 移动端菜单切换功能
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active'); // 点击按钮切换导航菜单的active类
+        });
+        
+        // 当点击导航链接时，关闭移动菜单 (提升用户体验)
+        document.querySelectorAll('nav ul li a').forEach(item => {
+            item.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+        
+        // 由于移除了表单和页面内部锚点跳转，此页面无需额外的JS逻辑，因此无需平滑滚动等代码。
+    </script>
+</body>
+</html>
