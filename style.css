@@ -292,57 +292,6 @@ section {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
-
-/* ==================== News Section (新闻动态区块) ==================== */
-.news-container {
-    background: white;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    overflow: hidden;
-}
-
-.news-item {
-    padding: 1.5rem;
-    border-bottom: 1px solid var(--border); /* 底部边框 */
-    display: flex;
-    align-items: flex-start; /* 顶部对齐 */
-}
-
-.news-item:last-child {
-    border-bottom: none; /* 最后一个新闻项无底部边框 */
-}
-
-.news-date {
-    min-width: 80px; /* 最小宽度 */
-    background: var(--light);
-    padding: 0.5rem;
-    border-radius: 4px;
-    text-align: center;
-    margin-right: 1.5rem;
-}
-
-.news-date .day {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--accent);
-}
-
-.news-date .month {
-    font-size: 0.9rem;
-    text-transform: uppercase; /* 转换为大写 */
-    color: var(--text);
-}
-
-.news-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.view-all {
-    text-align: center;
-    margin-top: 2rem;
-}
-
 /*============================partner section=====================*/
 .partners-section {
     background-color: white;
@@ -467,22 +416,21 @@ section {
         max-width: 60px;
     }
 }
-
-        /* ==================== People Section (团队成员完整页面) ==================== */
-
-        /* Team leader */
+/* ==================== People Section (团队成员完整页面) ==================== */
+/* Team leader */
+        
         .team_leader-category {
             text-align: center; /* 标题文本居中 */
-            margin: 60px 0;
+            margin: 20px 0;
         }
         
         .team_leader-category h3 {
-            font-size: 28px;
+            font-size: 22px;
             color: #2c3e50;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             position: relative;
             display: inline-block;
-            padding-bottom: 12px;
+            padding-bottom: 10px;
         }
         
         .team_leader-category h3::after {
@@ -502,29 +450,43 @@ section {
             display: flex;
             justify-content: center; /* 水平居中 */
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 30px;
         }
         
         /* 人员卡片样式 */
         .person_leader-card {
             background: white;
-            border-radius: 16px;
+            border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
-            max-width: 380px;
+            max-width: 226px;
             width: 100%;
+            margin:0 auto;
         }
         
         .person_leader-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        
         .person_leader-img {
-            background: linear-gradient(135deg, #3498db, #2c3e50);
-            padding: 50px 0;
+            height: 280px; /* 可根据需要调整高度 */
+            width:100%;
+            padding: 0; /* 移除原有 padding，避免影响图片显示 */
             text-align: center;
+            position: relative;
+            overflow: hidden; /* 隐藏超出容器的部分 */
+            margin:0;
+            background: #ffffff;
+        }
+        .person_leader-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 保持图片比例，填充容器，多余部分裁剪 */
+            display: block;
+            position: absolute; /* 使用绝对定位 */
+            top: 0;
+            left: 0;
         }
         
         .avatar_leader-placeholder {
@@ -539,18 +501,27 @@ section {
         
         .person_leader-info h3 {
             font-size: 22px;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
             color: #2c3e50;
         }
         
         .person_leader-role {
             color: #3498db;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
             font-size: 16px;
         }
         
-        
+        .person_leader-info h3 a {
+            color: #2c3e50; /* 保持原有颜色 */
+            text-decoration: none; /* 去掉下划线 */
+            transition: color 0.3s ease;
+        }
+
+        .person_leader-info h3 a:hover {
+            color: #3498db; /* 悬停时变色 */
+            text-decoration: none; /* 确保悬停时也没有下划线 */
+        }
         .person_leader-detail {
             color: #34495e;
             line-height: 1.6;
@@ -601,7 +572,7 @@ section {
         }
         
         .team-category {
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
         
         .team-category h3 {
@@ -621,13 +592,13 @@ section {
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: var(--accent);
+            background: transparent;
             border-radius: 2px;
         }
         
         .people-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
@@ -635,10 +606,15 @@ section {
         .person-card {
             text-align: center;
             background: white;
-            border-radius: 8px;
+            border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: transform 0.3s ease;
+            max-width: 220px;
+            width: 100%;
+            margin:0 ;
+            padding:0;
+            object-fit: fill;
         }
         
         .person-card:hover {
@@ -646,34 +622,44 @@ section {
         }
         
         .person-img {
-            height: 200px;
-            background: var(--light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 300px; /* 可根据需要调整高度，与原有设计保持协调 */
+            width:100%;
+            background: #ffffff;
+   
             position: relative;
-            overflow: hidden;
+            overflow: hidden; /* 隐藏超出容器的部分 */
+            padding: 0; /* 移除内边距 */
+            margin: 0 auto; /* 移除外边距 */
+            line-height: 0; /* 🔴 重要：消除inline元素的间隙 */
+            font-size: 0;
         }
         
         .person-img img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: 90%;
+            object-fit: fill; /* 保持图片比例，填充容器，多余部分裁剪 */
+            display: block;
+            margin: 0;
+            padding: 0;
+            position: absolute; /* 使用绝对定位 */
+            top: 0;
+            left: 0;
+            vertical-align: top;
         }
-        
         .person-img .avatar-placeholder {
-            font-size: 5rem;
+            display: none;
+            font-size: 4rem;
             color: var(--accent);
             opacity: 0.7;
         }
         
         .person-info {
-            padding: 1.5rem;
+            padding: 0.3rem;
         }
         
         .person-info h3 {
-            margin-bottom: 0.3rem;
-            font-size: 1.4rem;
+            margin-bottom: 0.1rem;
+            font-size: 1.3rem;
         }
         
         .person-role {
@@ -688,20 +674,63 @@ section {
             font-size: 0.95rem;
             color: var(--text);
         }
-
-        
-        .person-education {
-            font-style: italic;
-            color: #666;
-            margin-top: 0.8rem;
-            font-size: 0.9rem;
-        }
         
         .view-all {
             text-align: center;
             margin-top: 3rem;
         }
-        
+
+        .alumni-list {
+    max-width: 800px; /* 限制最大宽度，避免在大屏幕上过宽 */
+    margin: 0 auto; /* 水平居中 */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden; /* 确保子元素的圆角生效 */
+    font-family: 'Roboto', sans-serif;
+}
+
+.alumni-header, .alumni-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 创建三列等宽布局 */
+    text-align: center; /* 单元格内文本居中 */
+    padding: 15px 10px;
+    border-bottom: 1px solid #ecf0f1; /* 行与行之间的分隔线 */
+    transition: background-color 0.3s ease;
+}
+
+.alumni-row:last-child {
+    border-bottom: none; /* 最后一行不需要下边框 */
+}
+
+.alumni-header {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    font-weight: 700; /* 表头字体加粗 */
+    font-size: 1.1rem;
+}
+
+.alumni-row {
+    color: #34495e;
+    font-size: 1rem;
+}
+
+.alumni-row:hover {
+    background-color: #f1f5f8; /* 鼠标悬停时高亮显示 */
+}
+
+
+/* 响应式设计：在小屏幕上调整字体大小和内边距 */
+@media (max-width: 768px) {
+    .alumni-header, .alumni-row {
+        padding: 12px 5px;
+        font-size: 0.9rem;
+    }
+
+    .alumni-header {
+        font-size: 1rem;
+    }
+}
 
 /* ==================== Publications Section (研究成果区块) ==================== */
 .pub-list {
@@ -1067,4 +1096,5 @@ footer {
     .logo-text-container {
         margin-left: 10px; /* 移动端文字间距也缩小 */
     }
+
 }
